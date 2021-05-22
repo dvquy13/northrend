@@ -3,7 +3,7 @@ from functools import wraps
 
 
 def log_time(get_time=False, printer=print):
-    def _timeit(method):
+    def _log_time(method):
         @wraps(method)
         def timed(*args, **kw):
             ts = time.time()
@@ -18,4 +18,4 @@ def log_time(get_time=False, printer=print):
 
         return timed
 
-    return _timeit
+    return _log_time
