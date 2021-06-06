@@ -6,8 +6,16 @@ name = "pypi"
 [packages]
 build = "*"
 twine = "*"
+scikit-learn = "*"
+numpy = "*"
+scipy = "*"
+pandas = "*"
 
 [dev-packages]
+black = "*"
 
 [requires]
 python_version = "3.8"
+
+[pipenv]
+allow_prereleases = true
