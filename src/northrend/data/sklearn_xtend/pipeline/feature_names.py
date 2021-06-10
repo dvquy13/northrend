@@ -213,3 +213,9 @@ def get_feature_names(column_transformer):
             feature_names.extend(get_names(trans))
 
     return feature_names
+
+
+def add_feature_names_from_column_transformer(X, feature_pipe):
+    feature_names = get_feature_names(feature_pipe)
+    X_t = pd.DataFrame(data=X, columns=feature_names)
+    return X_t
